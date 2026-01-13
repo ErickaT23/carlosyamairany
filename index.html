@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos y Amairany</title>
+    <meta name="description" content="Llego el momento de unir nuestro amor por siempre">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nos Casamos">
+    <meta property="og:image" content="https://images.pexels.com/photos/35660272/pexels-photo-35660272.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preload" href="/images/SAB.png" as="image">
+    <link rel="preload" href="/images/SAR.png" as="image">
+    <link rel="preload" href="/images/play.png" as="image">
+    <link rel="preload" href="/images/H1.jpg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="https://kit.fontawesome.com/3c219a0781.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head> 
+<body>
+    <div style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <i class="fas fa-play"></i>
+        <i class="fas fa-pause"></i>
+    </div>    
+<div class="main-content">
+    <!-- Sección de sobre -->
+    <div id="envelope">
+        <div id="envelope-top"></div>
+        <div id="seal" onclick="openEnvelopeAndPlayMusic()">
+            <h2 class="fade-in-element">C | A</h2>
+        </div>
+        <div id="envelope-bottom"></div>
+    </div>
+    <!-- Sección de invitación -->
+    <div id="invitation" class="hidden">
+          <div class="photo-section fade-in-element">
+             <div class="photo-container">
+                 <img src="/images/H2.jpg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element" loading="lazy">
+             </div>
+                <div class="photo-text">
+                 <h1>Carlos y Amairany</h1>
+                 <h2>23 . 01 . 2026</h2>
+               </div>
+          </div> 
+        <div class="contenedor-play">
+            <h1 class="texto-play fade-in-element fade-in-element">Te encontre - El Vega</h1>
+            <div id="playPauseButton" class="icono-contenedor fade-in-element fade-in-element">
+                <i id="iconoPlayPause" class="fas fa-play" aria-hidden="true"></i>
+            </div>
+            <audio id="audioPlayer" src="/music/teencontre.mp3" loop></audio>
+            <div class="progress-container">
+                <input id="progress-bar" type="range" value="0" min="0" max="100" step="1">
+                <div class="time-display">
+                    <span id="current-time">0:00</span> / <span id="duration-time">0:00</span>
+                </div>
+            </div>            
+        </div>               
+         <div class="content">
+            <div class="photo-section fade-in-element fade-in-element">
+                <div class="photo-container">
+                    <img src="/images/H4.jpg" alt="Foto de la pareja" class="photo fade-in-element fade-in-element">
+                </div>
+                      <div class="photo-text fade-in-element fade-in-element">
+                          <h3 class="title">¡Nos casamos!</h3>
+                          <p>Prometemos amarnos y cuidarnos mutuamente mientras caminamos juntos por el camino del matrimonio. Por eso los invitamos a ser parte de nuestra ceremonia de unión.</p>
+                          <div class="countdown fade-in-element fade-in-element">
+                              <div class="unit">
+                                 <span id="days" class="number">00</span>
+                                 <span class="label">Días</span>
+                              </div>
+                               <div class="unit">
+                                 <span id="hours" class="number">00</span>
+                                 <span class="label">Horas</span>
+                              </div>
+                             <div class="unit">
+                                 <span id="minutes" class="number">00</span>
+                                 <span class="label">Minutos</span>
+                             </div>
+                             <div class="unit">
+                                 <span id="seconds" class="number">00</span>
+                                 <span class="label">Segundos</span>
+                             </div>
+                         </div>    
+                         <div class="calendar-button fade-in-element fade-in-element" style="margin-top: 20px; text-align:center;">
+                            <a 
+                              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nos+casamos+Carlos+y+Amairany+%F0%9F%92%8D&dates=20260123/20260124" 
+                              target="_blank"
+                              class="btn-calendar"
+                              style="display:inline-block; padding:12px 22px; background:#1F2633; color:white; border-radius:8px; text-decoration:none;font-weight:600;">Agregar al Calendario</a>
+                         </div>                
+                      </div>
+                 </div>
+            </div>
+                    <div class="guest-section fade-in-element fade-in-element">
+                      <p id="guest-name" class="fade-in-element"></p>
+                   </div>
+            <div class="invitation-info-section fade-in-element fade-in-element">
+                <p>Invitación válida por <span id="passes"></span> <i class="fa-solid fa-ticket"></i> </p>
+            </div>
+            <div class="parents-section fade-in-element">
+                <h2>Con la bendición de Dios y de nuestros padres</h2>
+              
+                <div class="parents-grid">
+                  <div class="parents-card">
+                    <h3>Padres del Novio</h3>
+                    <p>Pedro Celestino Puac Chanax (QPD)</p>
+                    <p>Julia Fermina Aguilar Son</p>
+                  </div>
+              
+                  <div class="parents-card">
+                    <h3>Padres de la Novia</h3>
+                    <p>Magdalena Mazariegos</p>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="itinerary-section fade-in-element fade-in-element">
+                  <div class="itinerary-item">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/fshosubk.json"
+                        stroke="light"
+                        colors="primary:#23314b,secondary:#4f545d" 
+                        class="lord-icon-style"
+                        trigger="loop"
+                    ></lord-icon>
+                     <h2>Ceremonia</h2>
+                     <p>Gadzi</p>
+                       <div class="itinerary-details">
+                         <div class="time-location">
+                             <span class="date">23 de Enero</span>
+                             <span class="separator">|</span>
+                             <span class="time">17:00 hrs</span>
+                         </div>
+                          <p class="location">San Mateo, Quetzaltenango</p>
+                          <button type="button"  class="directions-button" onclick="location.href='https://maps.app.goo.gl/EHFKju48qiCq8RWA6'">CÓMO LLEGAR</button>
+                      </div>
+                   </div> 
+
+                <div class="itinerary-item">
+                    <lord-icon 
+                     src="https://cdn.lordicon.com/lhzhnixi.json"  
+                     stroke="light" 
+                     colors="primary:#23314b,secondary:#4f545d" 
+                     class="lord-icon-style"
+                     trigger="loop"
+                     ></lord-icon>
+                    <h2>Recepción</h2>
+                    <p>Gadzi</p>
+                    <div class="itinerary-details">
+                        <div class="time-location">
+                            <span class="date">23 de Enero</span>
+                            <span class="separator">|</span>
+                            <span class="time">18:30 hrs</span>
+                        </div>
+                        <p class="location">San Mateo, Quetzaltenango</p>
+                        <button class="directions-button" onclick="location.href='https://maps.app.goo.gl/EHFKju48qiCq8RWA6'">CÓMO LLEGAR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/V1.jpg" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <!--<div class="gifts-section fade-in-element fade-in-element">
+                <h2>Mesa de Regalos</h2>
+                <lord-icon 
+                    src="https://cdn.lordicon.com/ibydboev.json" 
+                    stroke="light" 
+                    colors="primary:#23314b,secondary:#4f545d" 
+                    trigger="loop"
+                    class="lord-icon-style">
+                </lord-icon>
+            
+                <p>Tu presencia siempre sera el regalo más importante,  pero si un obsequio nos quieren dar, puede ser en el siguiente link o en efectivo.</p>
+            
+                <div class="gifts-section-button">
+                    <button onclick="window.open('https://www.cemaco.com/list/BodaZuñigaHernandez31012026', '_blank')">
+                        Boda Cemaco
+                    </button>
+                </div>-->
+            
+                <!-- ⭐ Nuevo botón: Cuenta Bancaria -->
+                <!--<div class="gifts-section-button">
+                    <button onclick="toggleDetails()">
+                        Cuenta bancaria
+                    </button>
+                </div>
+            
+                <p>¡Muchas gracias!</p>-->
+            
+                <!-- ⭐ Pop-up / Modal de Cuenta Bancaria -->
+                <!--div id="accountDetails" 
+                     style="
+                        display:none;
+                        position: fixed;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background: rgba(0,0,0,0.6);
+                        backdrop-filter: blur(3px);
+                        z-index: 9999;
+                        justify-content: center;
+                        align-items: center;
+                     ">
+            
+                    <div style="
+                        background: white;
+                        padding: 25px;
+                        border-radius: 10px;
+                        text-align: center;
+                        max-width: 85%;
+                        margin: auto;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                        font-size: 35px;
+                        line-height: 1.3;
+                    ">
+                        <h1 style="font-size:45px; margin-bottom:20px; color:#23314b; text-transform: capitalize;">Cuenta Bancaria</h1>
+            
+                        <p><strong>BAC</strong></p>
+                        <p>SELVIN HUMBERTO ZUÑIGA ULÍN</p>
+                        <p><strong>No. cuenta:</strong> 969994714</p>
+            
+                        <button onclick="toggleDetails()"
+                            style="
+                                margin-top: 25px;
+                                padding: 10px 20px;
+                                font-size: 20px;
+                                border: none;
+                                border-radius: 5px;
+                                background: #8B9C74;
+                                color: white;
+                                cursor: pointer;
+                            ">
+                            Cerrar
+                        </button>
+                    </div>
+                </!--div>
+            </div>-->
+            <div class="dresscode-section fade-in-element">
+                <h2>Dress Code</h2>
+                <lord-icon
+                    src="https://cdn.lordicon.com/okgbpdra.json"
+                    stroke="light"
+                    colors="primary:#23314b,secondary:#4f545d"
+                    class="lord-icon-style"
+                    trigger="loop"
+                ></lord-icon>
+                <p>Formal, nos reservamos el color blanco para la novia.</p>
+                
+                <div class="dresscode-buttons">
+                    <button onclick="window.open('https://www.pinterest.com/search/pins/?q=Bodas%20en%20la%20tarde%20para%20damas&rs=typed', '_blank')">
+                        Ideas para Damas
+                    </button>
+                    <button onclick="window.open('https://www.pinterest.com/search/pins/?q=Traje%20formal%20caballeros&rs=typed', '_blank')">
+                        Ideas para Caballeros
+                    </button>
+                </div>
+            </div>  
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/H2.jpg" alt="Foto de la pareja" loading="lazy">
+            </div>           
+
+            <div class="album-section fade-in-element">
+                <h2>¡Hagamos los recuerdos inolvidables!</h2>
+                <h1 class="hashtag">#noscasamoscarlosyamairany</h1>
+                <div class="qr-container">
+                    <div id="qrCode"></div>
+                    <img src="/images/QR.png" alt="Escane el QR" width="400">
+                    <p>Escanea el código QR o usa el botón para subir tus fotos</p>
+                    <a class="upload-btn" href="https://drive.google.com/drive/folders/1dYyDCO12rXcaVfwlYJr-fclpCkjIzn0k?usp=drive_link" target="_blank">SUBIR FOTOS</a>
+                </div>
+            </div>
+            
+            <div class="rsvp-section fade-in-element fade-in-element">
+                <h2>Confirmación</h2>
+                <lord-icon 
+                 src="https://cdn.lordicon.com/wzwygmng.json" 
+                 stroke="light"  
+                 colors="primary:#23314b,secondary:#4f545d" 
+                 class="lord-icon-style"
+                 trigger="loop"
+                 ></lord-icon>
+                <p>Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrás acompañarnos.</p>
+                <button type="button" onclick="confirmarWhatsApp()">CONFIRMA TU ASISTENCIA</button>
+            </div>
+            <div class="photo-full fade-in-element fade-in-element">
+                <img src="/images/H1.jpg" alt="Foto de la pareja" loading="lazy">
+            </div>
+            <div class="banner-section fade-in-element fade-in-element1">
+                <p>Con Dios como centro, iniciamos este camino juntos.</p>
+            </div>
+            <footer class="fade-in-element fade-in-element">
+                <div class="social-icons">
+                    <a href="https://wa.me/50236011737" aria-label="Whatsapp"><i class="fab fa-whatsapp fade-in-element"></i></a>
+                    <a href="https://www.facebook.com/thetwodesign?mibextid=ZbWKwl" aria-label="Facebook"><i class="fab fa-facebook fade-in-element"></i></a>
+                    <a href="https://www.instagram.com/thetwodesign?igsh=M2k5eWF4dHl3czNv" aria-label="Instagram"><i class="fab fa-instagram fade-in-element"></i></a>
+                </div>
+                <div class="logo fade-in-element">
+                    <img src="/images/2.png" alt="Logo de la empresa">
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+    <script type="module" src="/database.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script type="module" src="/loads.js" defer></script>
+</body>
+</html>
