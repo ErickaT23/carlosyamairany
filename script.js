@@ -192,7 +192,7 @@ window.toggleDetails = function() {
 }
 
 window.confirmarWhatsApp = function () {
-    const phone = "50255908054";
+    const phone = "50245211118";
   
     const guest = window.currentGuest;
   

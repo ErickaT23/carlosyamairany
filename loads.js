@@ -1,5 +1,5 @@
 const guests = [
-    { id: "1", name: "Fam. Zuñiga Hernandez", passes: 2, gender: "mixto" },
+    { id: "1", name: "Familia Aguilar Son", passes: 4, gender: "mixto" },
   ];  
 
   document.addEventListener("DOMContentLoaded", function () {
