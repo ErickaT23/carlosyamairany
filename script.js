@@ -201,7 +201,7 @@ window.confirmarWhatsApp = function () {
   
     const verbo = pases === 1 ? "soy" : "somos";
   
-    const texto = `Hola, ${verbo} ${nombre} y confirmo la asistencia a la boda de Andrea y Selvin. Somos ${pases} ${pases === 1 ? "persona" : "personas"}.`;
+    const texto = `Hola, ${verbo} ${nombre} y confirmo la asistencia a la boda de Carlos y Amairany. Somos ${pases} ${pases === 1 ? "persona" : "personas"}.`;
   
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
     window.location.href = url;
