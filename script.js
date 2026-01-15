@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
         togglePlayPause();
     });
 
-    const targetDate = new Date('2026-01-31T00:00:00').getTime();
+    const targetDate = new Date('2026-01-23T00:00:00').getTime();
     const countdown = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
