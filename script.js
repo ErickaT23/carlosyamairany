@@ -196,14 +196,19 @@ window.confirmarWhatsApp = function () {
   
     const guest = window.currentGuest;
   
-    const nombre = guest?.name ? guest.name : "Invitado";
-    const pases = guest?.passes ? guest.passes : 1;
+    const nombre = guest?.name || "Invitado";
+    const pases = guest?.passes || 1;
   
-    const verbo = pases === 1 ? "soy" : "somos";
+    let texto = "";
   
-    const texto = `Hola, ${verbo} ${nombre} y confirmo la asistencia a la boda de Carlos y Amairany. Somos ${pases} ${pases === 1 ? "persona" : "personas"}.`;
+    if (pases === 1) {
+      texto = `Hola, soy ${nombre} y confirmo mi asistencia con 1 pase, a la boda de Carlos y Amairany.`;
+    } else {
+      texto = `Hola, somos ${nombre} y confirmamos nuestra asistencia con ${pases} pases, a la boda de Carlos y Amairany.`;
+    }
   
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
     window.location.href = url;
   };
+  
   
